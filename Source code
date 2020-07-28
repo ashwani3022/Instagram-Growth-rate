@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class Growth { 
+public static void main(String[] args) { 
+    // y = a(1 + r)^x 
+    // a = intial followers 
+    // r = growth rate 
+    // d = decrease rate 
+    // x = time interval 
+    System.out.println("Let's calculate followers!"); 
+    System.out.println("This program uses y = a(1 + (r - d))^x "); 
+    System.out.println("Enter initial followers (a): "); 
+    Scanner scan = new Scanner(System.in); 
+    int a = scan.nextInt(); 
+    System.out.println("Enter growth rate of followers (r): "); 
+    double r = scan.nextDouble(); 
+    System.out.println("Enter decrease rate of followers (d): "); 
+    double d = scan.nextDouble(); 
+    System.out.println("Enter time interval in month (x): "); 
+    int x = scan.nextInt(); 
+    System.out.println(calculateFoll(a, r, x, d));
+    }
+      public static int calculateFoll(int a, double r, int x, double d) { 
+      System.out.print(" Current Followers "); 
+      return (int) (a * Math.pow((1 + (r-d)), x) ) ; 
+      } 
+      }
